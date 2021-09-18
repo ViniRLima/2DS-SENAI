@@ -1,0 +1,13 @@
+select reverse(nomePessoa) from Pessoa
+left join Telefone
+on Pessoa.idPessoa = Telefone.idPessoa
+left join Email
+on Pessoa.idPessoa = Email.idPessoa
+left join CHN
+on Pessoa.idPessoa = CNH.idPessoa
+
+
+
+select cd_pessoa, nm_pessoa
+from pessoa
+order by nm_pessoa desc
