@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let personagens = [{
+            nome: "Capitão Cometa",
+            dataAparicao: 1951,
+            editora: "DC"
+        }, {
+            nome: "Lanterna Verde",
+            dataAparicao: 1940,
+            editora: "DC"
+        }, {
+            nome: "Ciborgue",
+            dataAparicao: 1980,
+            editora: "DC"
+        }, {
+            nome: "Homem Aranha",
+            dataAparicao: 1962,
+            editora: "Marvel"
+        }, {
+            nome: "Homem de Ferro",
+            dataAparicao: 1963,
+            editora: "Marvel"
+        }, {
+            nome: "Capitão América",
+            dataAparicao: 1940,
+            editora: "Marvel"
+        }];
+
+        // 1.   Liste somente os personagens cuja editora seja Marvel;
+        console.log('1. Lista somente os personagens cuja editora seja Marvel.');
+
+        let personagensMarvel = personagens.filter( (personagem) => {
+            return personagem.editora === 'Marvel';
+        } );
+        console.log(personagensMarvel);
+
+        // 2.	Liste somente os personagem cuja data de Aparição seja superior a 1950;
+        console.log('2. Liste somente os personagem cuja data de Aparição seja superior a 1950.');
+
+        let dataAparicaomaior1950 = personagens.filter( (personagem) => {
+            return personagem.dataAparicao > 1950;
+        } );
+        console.log(dataAparicaomaior1950);
+
+        // 3.	Some a idade de todos os personagens; 
+        console.log('3.	Some a idade de todos os personagens.');
+        const idadePersonagem = personagens.map((personagem) =>{
+            return 2021 - (personagem.dataAparicao)
+        })
+        console.log(idadePersonagem);
+        console.log(idadePersonagem.reduce((a,b) => a+b,0));
+        
+        // 4.	Traga somente os nomes dos personagens;
+        console.log('4.	Traga somente os nomes dos personagens.');
+        console.log(personagens.map(p =>p.nome))
+
+        // 5.	Adicione mais um personagem chamado Capitã Marvel, data de Aparição 1977 e editora Marvel;
+        console.log('5.	Adicione mais um personagem chamado Capitã Marvel, data de Aparição 1977 e editora Marvel.');
+        personagens.push({
+            nome: "Capitã Marvel",
+            dataAparicao: 1977,
+            editora: "Marvel"
+         });
+         console.log(personagens);
+
+        // 6. Mostre a quantidade de personagens da Marvel que possuem na lista
+        console.log('6. Mostre a quantidade de personagens da Marvel que possuem na lista.');
+        let personagensMarvel2 = personagens.filter( (personagem) => {
+            return personagem.editora === 'Marvel';
+        } );
+        console.log(personagensMarvel2.length)
+
+        // 7. Mostre o nome e a idade dos personagens
+        console.log('7. Mostre o nome e a idade dos personagens.');
+        //let nomeIdade = personagens.map()
+        console.log(personagens.map())
+    </script>
+
+</body>
+
+</html>
